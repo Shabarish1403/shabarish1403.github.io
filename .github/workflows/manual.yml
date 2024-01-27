@@ -32,4 +32,4 @@ jobs:
         git config --global user.name "shabarish1403"
         git add .
         git commit -m "Update submodule"
-        git push
+        git push https://${{ secrets.GH_TOKEN }}@github.com/shabarish1403/shabarish1403.github.io.git HEAD:main
