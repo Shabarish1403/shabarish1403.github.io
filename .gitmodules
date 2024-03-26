@@ -2,5 +2,5 @@
 	path = se2001-21f1001346
 	url = https://github.com/Shabarish1403/se2001-21f1001346.git
 [submodule "BigMarket-Frontend"]
-	path = BigMarket-Frontend
+	path = bigmarket
 	url = https://github.com/Shabarish1403/BigMarket-Frontend.git

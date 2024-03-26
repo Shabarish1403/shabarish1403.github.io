@@ -1,35 +1,35 @@
-# This is a basic workflow that is manually triggered
+# # This is a basic workflow that is manually triggered
 
-name: Update submodule repo
+# name: Update submodule repo
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
-on:
-  push:
-    branches:
-      - main
+# # Controls when the action will run. Workflow runs when manually triggered using the UI
+# # or API.
+# on:
+#   push:
+#     branches:
+#       - main
       
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "greet"
-  update-pages:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobs:
+#   # This workflow contains a single job called "greet"
+#   update-pages:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2 
-    # Runs a single command using the runners shell
-    - name: Update and fetch submodule
-      run: |
-        git submodule update --init --recursive
-        git submodule foreach git pull origin main
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#     - name: Checkout Repository
+#       uses: actions/checkout@v2 
+#     # Runs a single command using the runners shell
+#     - name: Update and fetch submodule
+#       run: |
+#         git submodule update --init --recursive
+#         git submodule foreach git pull origin main
 
-    - name: Commit and push changes
-      run: |
-        git config --global user.email "shabarish.14b@gmail.com"
-        git config --global user.name "shabarish1403"
-        git add .
-        git commit -m "Update submodule"
-        git push https://${{ secrets.GH_TOKEN }}@github.com/shabarish1403/shabarish1403.github.io.git HEAD:main
+#     - name: Commit and push changes
+#       run: |
+#         git config --global user.email "shabarish.14b@gmail.com"
+#         git config --global user.name "shabarish1403"
+#         git add .
+#         git commit -m "Update submodule"
+#         git push https://${{ secrets.GH_TOKEN }}@github.com/shabarish1403/shabarish1403.github.io.git HEAD:main
